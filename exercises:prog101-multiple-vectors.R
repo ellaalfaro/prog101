@@ -4,7 +4,10 @@ instrument_deployed_hm <- c(730, 915, 1345)
 # hm stands for hour minute
 # the first line (instrument_deployed_hm) is a vector for instrument_deployed_hm
 instrument_deployed_h <- floor(instrument_deployed_hm / 100)
-# divides by 100 and then floor is rounding down
+# divides by 100 and then floor is rounding down. They become 7, 9, 13.
+# An example is the first one 730, when divided by 100 becomes 7.3, and then is
+# rounded down to 7. The resulting values in the context of the problem are in
+# hours
 # the second line (instrument_deployed_h) is a conditional operator that
 # represents the
 instrument_deployed_hdec <- (instrument_deployed_hm %% 100) / 60
